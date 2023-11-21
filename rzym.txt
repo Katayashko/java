@@ -1,0 +1,42 @@
+import java.util.Scanner;
+
+public class Main
+{
+	public static void main(String[] args) {
+		Scanner scan = new Scanner(System.in);
+		System.out.print("Wpisz ilosc par liczb: ");
+		int pary = scan.nextInt();
+		
+		int[] array1;
+		array1 = new int[pary];
+		int[] array2;
+		array2 = new int[pary];
+		String[] arrayRome1;
+		arrayRome1 = new String[pary];
+		String[] arrayRome2;
+		arrayRome2 = new String[pary];
+		
+		for(int i = 0; i < pary; i++){
+		    array1[i] = scan.nextInt();
+		    array2[i] = scan.nextInt();
+		}
+		
+		for(int p = 0; p < pary; p++){
+		    int temp1 = 0;
+		    int temp2 = 0;
+		    for(int a1 = 0; a1 < pary; a1++){
+		        temp1 = array1[a1];
+		        temp2 = array2[a1];
+		        if(temp1%1000 == 0){
+		            arrayRome1[a1] += "M";
+		            array1[a1] += "M";
+		        }
+		    }
+		}
+		
+		for(int j = 0; j < pary; j++){
+		    System.out.print(arrayRome1[j] + ", ");
+		    System.out.print(" " + arrayRome2[j] + ", ");
+		}
+	}
+}
