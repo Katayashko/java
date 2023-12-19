@@ -1,0 +1,29 @@
+
+
+#include <iostream>
+using namespace std;
+
+int main()
+{
+    int n;
+    int l1;
+    int l2;
+    cin >> n;
+    int mynum1[n];
+    int mynum2[n];
+    for(int i = 0; i < n;i++){
+        cin >> l1;
+        cin >> l2;
+        mynum1[i]=l1;
+        mynum2[i]=l2;
+    }
+    for(int i = 0; i < n;i++){
+        int temp;
+        for(int j = 0; j < mynum2[i];i++){
+            temp = mynum1[i] * mynum1[i];
+        }
+        cout << temp;
+    }
+    
+    return 0;
+}
